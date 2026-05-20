@@ -992,7 +992,7 @@ export default function Home() {
                 gradientUnits="userSpaceOnUse"
               >
                 {" "}
-                <stop stopColor="#654c4f" /> <stop offset={1} stopColor="#c49f98" />{" "}
+                <stop stopColor="#5BD066" /> <stop offset={1} stopColor="#5BD066" />{" "}
               </linearGradient>{" "}
             </defs>{" "}
           </g>
