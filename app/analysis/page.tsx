@@ -103,9 +103,9 @@ function isApiIssue(value: unknown): value is ApiIssue {
 
 const SEVERITY_COLORS = {
   low: { bg: 'bg-cyan-500/20', border: 'border-cyan-500/30', text: 'text-cyan-300' },
-  medium: { bg: 'bg-amber-500/20', border: 'border-amber-500/30', text: 'text-amber-300' },
-  high: { bg: 'bg-orange-500/20', border: 'border-orange-500/30', text: 'text-orange-300' },
-  critical: { bg: 'bg-rose-500/20', border: 'border-rose-500/30', text: 'text-rose-300' },
+  medium: { bg: 'bg-sky-500/20', border: 'border-sky-500/30', text: 'text-sky-300' },
+  high: { bg: 'bg-blue-500/20', border: 'border-blue-500/30', text: 'text-blue-300' },
+  critical: { bg: 'bg-fuchsia-500/20', border: 'border-fuchsia-500/30', text: 'text-fuchsia-300' },
 };
 
 function UnifiedImageUploader({
@@ -251,9 +251,9 @@ function UnifiedImageUploader({
         <motion.div
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mt-4 rounded-2xl border border-rose-500/20 bg-rose-500/10 p-4"
+          className="mt-4 rounded-2xl border border-cyan-500/20 bg-cyan-500/10 p-4"
         >
-            <div className="flex items-start gap-2 text-rose-300">
+            <div className="flex items-start gap-2 text-cyan-300">
             <AlertCircle className="h-5 w-5 flex-shrink-0 mt-0.5" />
             <motion.div className="space-y-1 text-sm">
               <p className="font-semibold text-slate-100">Some images were not accepted</p>
@@ -339,7 +339,7 @@ function ScanningInterface({
       </motion.div>
 
       {errorMessage ? (
-        <motion.div className="rounded-3xl border border-rose-500/20 bg-rose-500/10 p-4 text-rose-200">
+        <motion.div className="rounded-3xl border border-cyan-500/20 bg-cyan-500/10 p-4 text-cyan-200">
           <strong>Error:</strong> {errorMessage}
         </motion.div>
       ) : null}
