@@ -120,17 +120,17 @@ export default function Home() {
   const whatsappText = 'Hello%2C%20I%20would%20like%20AI%20health%20analysis.';
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-slate-950 text-slate-100">
       {/* Hero */}
-      <section className="relative pt-20 pb-12 lg:pt-32 lg:pb-24 overflow-hidden bg-brand-50">
+      <section className="relative pt-20 pb-12 lg:pt-32 lg:pb-24 overflow-hidden bg-slate-950">
 
         {/* Background */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(101,76,79,0.16),transparent_40%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(101,76,79,0.08),transparent_40%)]" />
 
         {/* Blur Effects */}
-        <div className="absolute top-0 left-0 w-72 h-72 bg-brand-300/15 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-brand-200/15 rounded-full blur-3xl" />
+        <div className="absolute top-0 left-0 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -144,20 +144,20 @@ export default function Home() {
             >
 
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-md border border-brand-100 shadow-sm mb-6">
-                <Brain className="w-4 h-4 text-brand-700" />
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-slate-800 shadow-[0_20px_80px_rgba(8,18,35,0.35)] mb-6">
+                <Brain className="w-4 h-4 text-cyan-300" />
 
-                <span className="text-sm text-brand-700 font-semibold">
+                <span className="text-sm text-slate-100 font-semibold">
                   Advanced Automotive Assessment
                 </span>
               </div>
 
               {/* Heading */}
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 leading-[1.05] mb-6">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-100 leading-[1.05] mb-6">
 
                 Smart Vehicle <br />
 
-                <span className="bg-gradient-to-r from-brand-700 via-brand-500 to-brand-300 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-cyan-300 via-cyan-400 to-cyan-500 bg-clip-text text-transparent">
                   Condition Insight
                 </span>
 
@@ -168,7 +168,7 @@ export default function Home() {
               </h1>
 
               {/* Paragraph */}
-              <p className="text-sm sm:text-base text-gray-600 max-w-xl leading-relaxed mb-8">
+              <p className="text-sm sm:text-base text-slate-300 max-w-xl leading-relaxed mb-8">
                 Upload a few vehicle images and receive a fast AI-powered condition review.
                 Discover hidden issues, wear, and repair guidance without waiting for a manual inspection.
               </p>
@@ -178,7 +178,7 @@ export default function Home() {
 
                 <Link
                   href="/analysis"
-                  className="group w-full px-4 py-3 rounded-2xl gradient-brand-button text-white font-semibold transition-all shadow-[0_10px_30px_rgba(101,76,79,0.25)] flex items-center justify-center gap-2 text-center"
+                  className="group w-full px-4 py-3 rounded-2xl bg-gradient-to-r from-cyan-500 via-cyan-400 to-cyan-300 text-white font-semibold transition-all shadow-[0_18px_70px_rgba(29,161,255,0.25)] flex items-center justify-center gap-2 text-center"
                 >
                   Start Assessment
 
@@ -187,7 +187,7 @@ export default function Home() {
 
                 <Link
                   href="/pricing"
-                  className="w-full px-4 py-3 rounded-2xl bg-white/90 backdrop-blur-md border border-brand-100 text-gray-700 font-semibold hover:bg-white transition-all shadow-sm text-center"
+                  className="w-full px-4 py-3 rounded-2xl glass border border-slate-800 text-slate-100 font-semibold hover:bg-slate-900/80 transition-all shadow-sm text-center"
                 >
                   Pricing
                 </Link>
@@ -195,20 +195,20 @@ export default function Home() {
               </div>
 
               {/* Bottom Points */}
-              <div className="flex flex-col sm:flex-row flex-wrap gap-4 text-sm text-gray-600">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-4 text-sm text-slate-300">
 
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-brand-600" />
+                  <CheckCircle2 className="w-4 h-4 text-cyan-300" />
                   <span>No account setup needed</span>
                 </div>
 
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-brand-600" />
+                  <CheckCircle2 className="w-4 h-4 text-cyan-300" />
                   <span>Results ready in about two minutes</span>
                 </div>
 
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-brand-600" />
+                  <CheckCircle2 className="w-4 h-4 text-cyan-300" />
                   <span>Clear AI inspection guidance</span>
                 </div>
 
@@ -225,19 +225,19 @@ export default function Home() {
             >
 
               {/* Main Card */}
-              <div className="relative rounded-[24px] sm:rounded-[32px] border border-brand-100 bg-white/70 backdrop-blur-xl overflow-hidden shadow-[0_20px_80px_rgba(101,76,79,0.1)]">
+              <div className="relative rounded-[24px] sm:rounded-[32px] border border-slate-800 bg-slate-950/80 backdrop-blur-xl overflow-hidden shadow-[0_30px_120px_rgba(0,0,0,0.55)]">
 
                 {/* Top Bar */}
                 <div className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between gap-2 p-3 sm:p-5">
 
-                  <div className="flex items-center gap-1.5 sm:gap-2 px-2 py-1 sm:px-2.5 rounded-full bg-white/95 backdrop-blur-md border border-brand-100 shadow-sm flex-shrink-0">
-                    <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-brand-600 animate-pulse" />
-                    <span className="text-[9px] sm:text-xs font-semibold text-gray-700">
+                  <div className="flex items-center gap-1.5 sm:gap-2 px-2 py-1 sm:px-2.5 rounded-full glass border border-slate-800 shadow-sm flex-shrink-0">
+                    <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-cyan-400 animate-pulse" />
+                    <span className="text-[9px] sm:text-xs font-semibold text-slate-100">
                       Scan Active
                     </span>
                   </div>
 
-                  <div className="px-2 py-1 sm:px-2.5 rounded-full bg-brand-50 border border-brand-100 text-[9px] sm:text-xs font-bold text-brand-700 shadow-sm flex-shrink-0">
+                  <div className="px-2 py-1 sm:px-2.5 rounded-full bg-slate-900/90 border border-cyan-400/20 text-[9px] sm:text-xs font-bold text-cyan-300 shadow-sm flex-shrink-0">
                     LIVE ANALYSIS
                   </div>
 
@@ -263,7 +263,7 @@ export default function Home() {
 
                   {/* Scan Line */}
                   <motion.div
-                    className="absolute left-0 right-0 h-[2px] sm:h-[3px] bg-gradient-to-r from-transparent via-brand-400 to-transparent shadow-[0_0_20px_rgba(101,76,79,0.8)]"
+                    className="absolute left-0 right-0 h-[2px] sm:h-[3px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent shadow-[0_0_20px_rgba(101,76,79,0.8)]"
                     animate={{ top: ['10%', '90%', '10%'] }}
                     transition={{ duration: 4, repeat: Infinity, ease: 'linear' }}
                   />
@@ -281,7 +281,7 @@ export default function Home() {
                     {
                       positionClass: 'bottom-[10%] right-[3%] sm:bottom-[12%] sm:right-[8%]',
                       text: 'Engine Healthy',
-                      bgClass: 'bg-brand-500/90',
+                      bgClass: 'bg-cyan-500/90',
                       textClass: 'text-white',
                       widthClass: 'max-w-[42%] sm:max-w-[32%]',
                       iconClass: 'text-white',
@@ -305,7 +305,7 @@ export default function Home() {
                   <motion.div
                     animate={{ scale: [1, 1.15, 1] }}
                     transition={{ duration: 2, repeat: Infinity }}
-                    className="absolute top-[35%] left-[28%] w-3.5 h-3.5 sm:w-5 sm:h-5 rounded-full border-2 border-brand-400 shadow-[0_0_20px_rgba(101,76,79,0.8)]"
+                    className="absolute top-[35%] left-[28%] w-3.5 h-3.5 sm:w-5 sm:h-5 rounded-full border-2 border-cyan-400 shadow-[0_0_20px_rgba(101,76,79,0.8)]"
                   />
                   <motion.div
                     animate={{ scale: [1, 1.15, 1] }}
@@ -316,27 +316,27 @@ export default function Home() {
                 </div>
 
                 {/* Bottom Stats */}
-                <div className="relative bg-white/80 backdrop-blur-md border-t border-brand-100 p-3 sm:p-6">
+                <div className="relative bg-slate-950/85 backdrop-blur-md border-t border-slate-800 p-3 sm:p-6">
 
                   <div className="grid grid-cols-3 gap-2 sm:gap-3">
 
                     <div className="text-center">
-                      <div className="text-lg sm:text-2xl font-bold text-brand-700">96%</div>
-                      <div className="text-[9px] sm:text-xs text-gray-500 mt-0.5 sm:mt-1 leading-tight">
+                      <div className="text-lg sm:text-2xl font-bold text-cyan-300">96%</div>
+                      <div className="text-[9px] sm:text-xs text-slate-400 mt-0.5 sm:mt-1 leading-tight">
                         Detection Accuracy
                       </div>
                     </div>
 
                     <div className="text-center">
-                      <div className="text-lg sm:text-2xl font-bold text-brand-600">2m</div>
-                      <div className="text-[9px] sm:text-xs text-gray-500 mt-0.5 sm:mt-1 leading-tight">
+                      <div className="text-lg sm:text-2xl font-bold text-cyan-300">2m</div>
+                      <div className="text-[9px] sm:text-xs text-slate-400 mt-0.5 sm:mt-1 leading-tight">
                         Scan Duration
                       </div>
                     </div>
 
                     <div className="text-center">
-                      <div className="text-lg sm:text-2xl font-bold text-gray-900">AI</div>
-                      <div className="text-[9px] sm:text-xs text-gray-500 mt-0.5 sm:mt-1 leading-tight">
+                      <div className="text-lg sm:text-2xl font-bold text-slate-100">AI</div>
+                      <div className="text-[9px] sm:text-xs text-slate-400 mt-0.5 sm:mt-1 leading-tight">
                         Neural Engine
                       </div>
                     </div>
@@ -356,7 +356,7 @@ export default function Home() {
 
 
       {/* Trust Stats */}
-      <section className="py-12 bg-white border-y border-gray-100">
+      <section className="py-12 bg-slate-950 border-y border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             {TRUST_STATS.map((stat, i) => (
@@ -366,14 +366,14 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="flex items-center gap-4 p-5 rounded-2xl bg-gray-50 border border-gray-100"
+                className="flex items-center gap-4 p-5 rounded-2xl bg-slate-900/70 border border-slate-800"
               >
-                <div className="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center shrink-0">
-                  <stat.icon className="w-6 h-6 text-brand-600" />
+                <div className="w-12 h-12 rounded-xl bg-slate-900/70 flex items-center justify-center shrink-0">
+                  <stat.icon className="w-6 h-6 text-cyan-300" />
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
-                  <div className="text-xs text-gray-500">{stat.label}</div>
+                  <div className="text-2xl font-bold text-slate-100">{stat.value}</div>
+                  <div className="text-xs text-slate-400">{stat.label}</div>
                 </div>
               </motion.div>
             ))}
@@ -383,7 +383,7 @@ export default function Home() {
 
 
       {/* AI Intelligence Section */}
-      <section className="py-20 lg:py-28 bg-brand-50 relative overflow-hidden">
+      <section className="py-20 lg:py-28 bg-slate-950 relative overflow-hidden">
 
         {/* Background Effects */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(101,76,79,0.15),transparent_40%)]" />
@@ -401,23 +401,23 @@ export default function Home() {
             >
 
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-500/10 border border-brand-200 mb-6">
-                <Brain className="w-4 h-4 text-brand-600" />
-                <span className="text-sm text-brand-700 font-semibold">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-400/20 mb-6">
+                <Brain className="w-4 h-4 text-cyan-300" />
+                <span className="text-sm text-cyan-200 font-semibold">
                   Neural AI Intelligence
                 </span>
               </div>
 
               {/* Heading */}
-              <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
+              <h2 className="text-3xl lg:text-5xl font-bold text-slate-100 leading-tight mb-6">
                 Next-Generation AI <br />
-                <span className="text-brand-600">
+                <span className="text-cyan-300">
                   Vehicle Diagnostics
                 </span>
               </h2>
 
               {/* Description */}
-              <p className="text-gray-600 text-[12px] lg:text-2xl leading-relaxed mb-8 max-w-xl">
+              <p className="text-slate-300 text-[12px] lg:text-2xl leading-relaxed mb-8 max-w-xl">
                 Our system combines deep learning and computer vision to uncover hidden damage,
                 paint defects, and structural concerns from your vehicle photos.
               </p>
@@ -432,16 +432,16 @@ export default function Home() {
                 ].map((item, i) => (
                   <div key={i}>
                     <div className="flex justify-between mb-2">
-                      <span className="text-gray-700 text-sm font-medium">
+                      <span className="text-slate-200 text-sm font-medium">
                         {item[0]}
                       </span>
 
-                      <span className="text-brand-600 text-sm font-bold">
+                      <span className="text-cyan-300 text-sm font-bold">
                         {item[1]}
                       </span>
                     </div>
 
-                    <div className="h-2.5 rounded-full bg-brand-100 overflow-hidden">
+                    <div className="h-2.5 rounded-full bg-slate-700 overflow-hidden">
 
                       <motion.div
                         initial={{ width: 0 }}
@@ -451,7 +451,7 @@ export default function Home() {
                           duration: 1.5,
                           delay: i * 0.2,
                         }}
-                        className="h-full rounded-full bg-gradient-to-r from-brand-500 to-brand-400"
+                        className="h-full rounded-full bg-gradient-to-r from-cyan-500 to-cyan-400"
                       />
                     </div>
                   </div>
@@ -470,10 +470,10 @@ export default function Home() {
             >
 
               {/* Main Card */}
-              <div className="relative rounded-3xl border border-brand-100 bg-white/70 backdrop-blur-xl p-4 sm:p-8 overflow-hidden shadow-[0_10px_60px_rgba(101,76,79,0.08)]">
+              <div className="relative rounded-3xl border border-cyan-400/30 bg-slate-900/70 backdrop-blur-xl p-4 sm:p-8 overflow-hidden shadow-[0_10px_60px_rgba(8,18,35,0.35)]">
 
                 {/* Glow */}
-                <div className="absolute inset-0 bg-gradient-to-br from-brand-500/5 to-brand-500/5" />
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-cyan-500/5" />
 
                 {/* AI Circle */}
                 <div className="relative flex items-center justify-center h-[280px] sm:h-[400px]">
@@ -482,21 +482,21 @@ export default function Home() {
                   <motion.div
                     animate={{ rotate: 360 }}
                     transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-                    className="absolute w-48 h-48 sm:w-72 sm:h-72 rounded-full border border-brand-200"
+                    className="absolute w-48 h-48 sm:w-72 sm:h-72 rounded-full border border-cyan-400/30"
                   />
 
                   {/* Middle Ring */}
                   <motion.div
                     animate={{ rotate: -360 }}
                     transition={{ duration: 14, repeat: Infinity, ease: 'linear' }}
-                    className="absolute w-36 h-36 sm:w-56 sm:h-56 rounded-full border border-brand-300 border-dashed"
+                    className="absolute w-36 h-36 sm:w-56 sm:h-56 rounded-full border border-cyan-400/30 border-dashed"
                   />
 
                   {/* Core */}
                   <motion.div
                     animate={{ scale: [1, 1.08, 1] }}
                     transition={{ duration: 2, repeat: Infinity }}
-                    className="relative w-20 h-20 sm:w-32 sm:h-32 rounded-full bg-gradient-to-br from-brand-500 to-brand-400 flex items-center justify-center shadow-[0_0_60px_rgba(101,76,79,0.35)]"
+                    className="relative w-20 h-20 sm:w-32 sm:h-32 rounded-full bg-gradient-to-br from-cyan-500 to-cyan-400 flex items-center justify-center shadow-[0_0_60px_rgba(101,76,79,0.35)]"
                   >
                     <Brain className="w-10 h-10 sm:w-16 sm:h-16 text-white" />
                   </motion.div>
@@ -511,7 +511,7 @@ export default function Home() {
                       key={i}
                       animate={{ y: [0, -8, 0] }}
                       transition={{ duration: 3 + i, repeat: Infinity }}
-                      className="absolute px-2 py-1 sm:px-4 sm:py-2 rounded-xl bg-white/90 border border-brand-100 shadow-lg backdrop-blur-md text-xs sm:text-sm text-brand-700 font-medium whitespace-nowrap"
+                      className="absolute px-2 py-1 sm:px-4 sm:py-2 rounded-xl bg-slate-900/70 border border-cyan-400/20 shadow-lg backdrop-blur-md text-xs sm:text-sm text-cyan-300 font-medium whitespace-nowrap"
                       style={card}
                     >
                       {card.text}
@@ -521,16 +521,16 @@ export default function Home() {
                 </div>
 
                 {/* Bottom Status */}
-                <div className="relative mt-4 flex items-center justify-between border-t border-brand-100 pt-5">
+                <div className="relative mt-4 flex items-center justify-between border-t border-cyan-400/20 pt-5">
 
                   <div className="flex items-center gap-2">
-                    <div className="w-2.5 h-2.5 rounded-full bg-brand-500 animate-pulse flex-shrink-0" />
-                    <span className="text-gray-600 text-[10px] sm:text-sm font-medium">
+                    <div className="w-2.5 h-2.5 rounded-full bg-cyan-500 animate-pulse flex-shrink-0" />
+                    <span className="text-slate-300 text-[10px] sm:text-sm font-medium">
                       Neural AI Processing
                     </span>
                   </div>
 
-                  <span className="text-brand-600 font-mono text-[11px] sm:text-sm font-semibold">
+                  <span className="text-cyan-300 font-mono text-[11px] sm:text-sm font-semibold">
                     STATUS: ONLINE
                   </span>
 
@@ -544,13 +544,13 @@ export default function Home() {
       </section>
 
       {/* Features */}
-      <section className="py-20 lg:py-28 bg-white">
+      <section className="py-20 lg:py-28 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-100 mb-4">
               Intelligent <span className="gradient-text">AI Features</span>
             </h2>
-            <p className="text-gray-500 max-w-xl mx-auto">
+            <p className="text-slate-400 max-w-xl mx-auto">
               Powered by advanced neural networks trained on millions of imagery samples for health analysis
             </p>
           </motion.div>
@@ -569,15 +569,15 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="flex-shrink-0 w-[calc(100vw-2rem)] xs:w-[80vw] sm:w-[260px] lg:w-[280px] snap-center group p-5 sm:p-6 lg:p-7 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md hover:border-brand-100 transition-all duration-300 card-shine"
+                  className="flex-shrink-0 w-[calc(100vw-2rem)] xs:w-[80vw] sm:w-[260px] lg:w-[280px] snap-center group p-5 sm:p-6 lg:p-7 rounded-2xl bg-slate-950/80 border border-slate-800 shadow-sm hover:shadow-md hover:border-cyan-400/40 transition-all duration-300 card-shine"
                 >
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-50 flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-brand-100 transition-colors">
-                    <feature.icon className="w-5 h-5 sm:w-6 sm:h-6 text-brand-600" />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-slate-900/70 flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-slate-800 transition-colors">
+                    <feature.icon className="w-5 h-5 sm:w-6 sm:h-6 text-cyan-300" />
                   </div>
-                  <h3 className="text-sm sm:text-base lg:text-lg font-semibold text-gray-900 mb-1.5 sm:mb-2">
+                  <h3 className="text-sm sm:text-base lg:text-lg font-semibold text-slate-100 mb-1.5 sm:mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-gray-500 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
                     {feature.desc}
                   </p>
                 </motion.div>
@@ -587,30 +587,30 @@ export default function Home() {
             {/* Left Arrow — always visible on mobile, hover-only on desktop */}
             <button
               onClick={() => scrollFeature('left')}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-3 sm:-translate-x-4 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/90 backdrop-blur-md border border-brand-100 shadow-lg flex items-center justify-center hover:bg-white transition-all opacity-100 lg:opacity-0 lg:group-hover:opacity-100 z-10 disabled:opacity-30"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-3 sm:-translate-x-4 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-slate-900/70 backdrop-blur-md border border-slate-800 shadow-lg flex items-center justify-center hover:bg-slate-900/80 transition-all opacity-100 lg:opacity-0 lg:group-hover:opacity-100 z-10 disabled:opacity-30"
               disabled={featureScrollPos <= 0}
             >
-              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-brand-600 rotate-180" />
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-cyan-300 rotate-180" />
             </button>
 
             {/* Right Arrow — always visible on mobile, hover-only on desktop */}
             <button
               onClick={() => scrollFeature('right')}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-3 sm:translate-x-4 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/90 backdrop-blur-md border border-brand-100 shadow-lg flex items-center justify-center hover:bg-white transition-all opacity-100 lg:opacity-0 lg:group-hover:opacity-100 z-10 disabled:opacity-30"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-3 sm:translate-x-4 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-slate-900/70 backdrop-blur-md border border-slate-800 shadow-lg flex items-center justify-center hover:bg-slate-900/80 transition-all opacity-100 lg:opacity-0 lg:group-hover:opacity-100 z-10 disabled:opacity-30"
               disabled={featureScrollPos >= (featureSliderRef.current?.scrollWidth || 0) - (featureSliderRef.current?.clientWidth || 0)}
             >
-              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-brand-600" />
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-cyan-300" />
             </button>
 
           </div>
 
           {/* Mobile swipe hint */}
-          <p className="mt-3 text-center text-[11px] text-gray-400 sm:hidden">Swipe to explore</p>
+          <p className="mt-3 text-center text-[11px] text-slate-500 sm:hidden">Swipe to explore</p>
         </div>
       </section>
 
       {/* How It Works */}
-      <section className="py-20 lg:py-28 bg-brand-50 relative overflow-hidden">
+      <section className="py-20 lg:py-28 bg-slate-950 relative overflow-hidden">
 
         {/* Background glow */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(101,76,79,0.15),transparent_55%)]" />
@@ -625,18 +625,18 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 border border-brand-100 backdrop-blur-md mb-5">
-              <Cpu className="w-4 h-4 text-brand-600" />
-              <span className="text-sm font-semibold text-brand-700">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/70 border border-cyan-400/20 backdrop-blur-md mb-5">
+              <Cpu className="w-4 h-4 text-cyan-300" />
+              <span className="text-sm font-semibold text-cyan-200">
                 AI Workflow Process
               </span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              How It <span className="text-brand-600">Works</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-100 mb-4">
+              How It <span className="text-cyan-300">Works</span>
             </h2>
 
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-slate-300 max-w-2xl mx-auto">
               A four-step workflow converts your uploads into a concise, easy-to-understand inspection summary.
             </p>
           </motion.div>
@@ -646,7 +646,7 @@ export default function Home() {
             <div ref={stepSliderRef} className="flex gap-6 overflow-x-auto scrollbar-hide pb-4 lg:pb-0 px-4 sm:px-6 snap-x snap-mandatory">
 
               {/* Connecting Line (desktop) */}
-              <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-[2px] bg-gradient-to-r from-brand-200 via-brand-300 to-brand-200" />
+              <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-[2px] bg-gradient-to-r from-cyan-300/40 via-cyan-200/30 to-cyan-300/40" />
 
               {STEPS.map((step, i) => (
                 <motion.div
@@ -659,7 +659,7 @@ export default function Home() {
                 >
 
                   {/* Card */}
-                  <div className="relative p-6 sm:p-8 rounded-3xl bg-white/80 backdrop-blur-md border border-brand-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                  <div className="relative p-6 sm:p-8 rounded-3xl bg-slate-900/70 backdrop-blur-md border border-cyan-400/20 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
 
                     {/* Step Number */}
                     {/* <div className="absolute -top-3 -left-3 w-10 h-10 rounded-full bg-brand-600 text-white flex items-center justify-center font-bold shadow-lg text-sm z-10">
@@ -667,29 +667,29 @@ export default function Home() {
                     </div> */}
 
                     {/* Icon */}
-                    <div className="w-12 h-12 rounded-2xl bg-brand-50 flex items-center justify-center mb-4 group-hover:bg-brand-100 transition">
-                      <step.icon className="w-5 h-5 text-brand-600" />
+                    <div className="w-12 h-12 rounded-2xl bg-slate-900/70 flex items-center justify-center mb-4 group-hover:bg-slate-800 transition">
+                      <step.icon className="w-5 h-5 text-cyan-300" />
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-sm sm:text-lg font-semibold text-gray-900 mb-2">
+                    <h3 className="text-sm sm:text-lg font-semibold text-slate-100 mb-2">
                       {step.title}
                     </h3>
 
                     {/* Description */}
-                    <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
                       {step.desc}
                     </p>
 
                     {/* Glow effect */}
-                    <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-brand-100/0 to-brand-100/0 group-hover:from-brand-100/40 group-hover:to-transparent transition-all duration-500" />
+                    <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-cyan-100/0 to-cyan-100/0 group-hover:from-cyan-100/30 group-hover:to-transparent transition-all duration-500" />
 
                   </div>
 
                   {/* Arrow connector */}
                   {i < 3 && (
                     <div className="hidden lg:flex absolute top-1/2 -right-6 transform -translate-y-1/2">
-                      <ArrowRight className="w-6 h-6 text-brand-300" />
+                      <ArrowRight className="w-6 h-6 text-cyan-300" />
                     </div>
                   )}
 
@@ -700,24 +700,24 @@ export default function Home() {
             {/* Step Navigation Arrows */}
             <button
               onClick={() => scrollStep('left')}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-10 h-10 rounded-full bg-white/90 backdrop-blur-md border border-brand-100 shadow-lg flex items-center justify-center hover:bg-white transition-all opacity-0 group-hover:opacity-100 z-10"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-10 h-10 rounded-full bg-slate-900/70 backdrop-blur-md border border-slate-800 shadow-lg flex items-center justify-center hover:bg-slate-900/80 transition-all opacity-0 group-hover:opacity-100 z-10"
               disabled={stepScrollPos <= 0}
             >
-              <ArrowRight className="w-5 h-5 text-brand-600 rotate-180" />
+              <ArrowRight className="w-5 h-5 text-cyan-300 rotate-180" />
             </button>
             <button
               onClick={() => scrollStep('right')}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-10 h-10 rounded-full bg-white/90 backdrop-blur-md border border-brand-100 shadow-lg flex items-center justify-center hover:bg-white transition-all opacity-0 group-hover:opacity-100 z-10"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-10 h-10 rounded-full bg-slate-900/70 backdrop-blur-md border border-slate-800 shadow-lg flex items-center justify-center hover:bg-slate-900/80 transition-all opacity-0 group-hover:opacity-100 z-10"
               disabled={stepScrollPos >= (stepSliderRef.current?.scrollWidth || 0) - (stepSliderRef.current?.clientWidth || 0)}
             >
-              <ArrowRight className="w-5 h-5 text-brand-600" />
+              <ArrowRight className="w-5 h-5 text-cyan-300" />
             </button>
           </div>
 
         </div>
       </section>
 
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-brand-50">
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-slate-950">
 
         {/* Background Glow */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(101,76,79,0.12),transparent_55%)]" />
@@ -734,19 +734,19 @@ export default function Home() {
               transition={{ duration: 0.8 }}
             >
 
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 border border-brand-100 backdrop-blur-md mb-6">
-                <Brain className="w-4 h-4 text-brand-600" />
-                <span className="text-sm font-semibold text-brand-700">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-slate-800 mb-6">
+                <Brain className="w-4 h-4 text-cyan-300" />
+                <span className="text-sm font-semibold text-cyan-200">
                   AI Inspection Engine
                 </span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-100 leading-tight mb-6">
                 Instant Condition
-                <span className="text-brand-600"> Evaluation</span>
+                <span className="text-cyan-300"> Evaluation</span>
               </h1>
 
-              <p className="text-gray-600 text-lg mb-8 leading-relaxed">
+              <p className="text-slate-300 text-lg mb-8 leading-relaxed">
                 The AI engine evaluates condition, identifies issues, and delivers clear findings fast.
               </p>
 
@@ -754,14 +754,14 @@ export default function Home() {
 
                 <Link
                   href="/analysis"
-                  className="w-full px-4 py-2 sm:px-6 sm:py-3 rounded-xl bg-brand-600 text-white text-sm font-semibold hover:bg-brand-700 transition shadow-lg text-center"
+                  className="w-full px-4 py-2 sm:px-6 sm:py-3 rounded-xl bg-cyan-600 text-white text-sm font-semibold hover:bg-cyan-700 transition shadow-lg text-center"
                 >
                   Start Scan
                 </Link>
 
                 <Link
                   href="/pricing"
-                  className="w-full px-4 py-2 sm:px-6 sm:py-3 rounded-xl bg-white border border-gray-200 text-gray-700 text-sm font-semibold hover:bg-gray-50 transition text-center"
+                  className="w-full px-4 py-2 sm:px-6 sm:py-3 rounded-xl bg-slate-900/70 border border-slate-800 text-slate-100 text-sm font-semibold hover:bg-slate-900/80 transition text-center"
                 >
                   View Pricing
                 </Link>
@@ -769,7 +769,7 @@ export default function Home() {
               </div>
 
               {/* small stats */}
-              <div className="mt-8 flex gap-6 text-sm text-gray-600">
+              <div className="mt-8 flex gap-6 text-sm text-slate-300">
                 <div>⚡ 2 min processing</div>
                 <div>🎯 96% accuracy</div>
                 <div>🔒 Secure AI system</div>
@@ -786,7 +786,7 @@ export default function Home() {
             >
 
               {/* Video Card */}
-              <div className="relative rounded-3xl overflow-hidden border border-brand-100 shadow-2xl">
+<div className="relative rounded-3xl overflow-hidden border border-cyan-400/20 shadow-2xl">
 
                 <Image
                   src="/ai.jpg"
@@ -799,24 +799,24 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
 
                 {/* AI Badge */}
-                <div className="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-white/90 text-brand-700 text-xs font-semibold backdrop-blur-md">
+                <div className="absolute top-4 left-4 px-3 py-1.5 rounded-full glass text-cyan-300 text-xs font-semibold backdrop-blur-md">
                   LIVE VEHICLE SCAN
                 </div>
 
                 {/* Animated Scan Line */}
                 <motion.div
-                  className="absolute left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-brand-400 to-transparent"
+                  className="absolute left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-cyan-300 to-transparent"
                   animate={{ top: ["10%", "90%", "10%"] }}
                   transition={{ duration: 3.5, repeat: Infinity, ease: "linear" }}
                 />
 
               </div>
 
-              <div className="absolute -top-6 -left-6 px-4 py-2 bg-white/80 backdrop-blur-md border border-brand-100 rounded-xl shadow-md text-xs text-brand-700 animate-bounce">
+              <div className="absolute -top-6 -left-6 px-4 py-2 glass border border-slate-800 rounded-xl shadow-md text-xs text-cyan-300 animate-bounce">
                 Detecting Damage...
               </div>
 
-              <div className="absolute bottom-6 -right-6 px-4 py-2 bg-white/80 backdrop-blur-md border border-brand-100 rounded-xl shadow-md text-xs text-brand-700 animate-bounce">
+              <div className="absolute bottom-6 -right-6 px-4 py-2 glass border border-slate-800 rounded-xl shadow-md text-xs text-cyan-300 animate-bounce">
                 AI Processing Active
               </div>
 
@@ -826,7 +826,7 @@ export default function Home() {
 
         </div>
       </section>
-      <section className="py-20 lg:py-32 bg-brand-50 relative overflow-hidden">
+      <section className="py-20 lg:py-32 bg-slate-950 relative overflow-hidden">
 
         {/* Background */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(101,76,79,0.12),transparent_50%)]" />
@@ -836,24 +836,24 @@ export default function Home() {
 
           {/* Heading */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 border border-brand-100 backdrop-blur-md mb-5">
-              <Cpu className="w-4 h-4 text-brand-600" />
-              <span className="text-sm font-semibold text-brand-700">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/70 border border-cyan-400/20 backdrop-blur-md mb-5">
+              <Cpu className="w-4 h-4 text-cyan-300" />
+              <span className="text-sm font-semibold text-cyan-200">
                 AI Processing Pipeline
               </span>
             </div>
 
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
-              How AI <span className="text-brand-600">Thinks</span>
+            <h2 className="text-4xl lg:text-5xl font-bold text-slate-100">
+              How AI <span className="text-cyan-300">Thinks</span>
             </h2>
 
-            <p className="text-gray-600 mt-4 max-w-xl mx-auto">
+            <p className="text-slate-300 mt-4 max-w-xl mx-auto">
               Every image goes through a deep neural decision flow before generating health analysis results.
             </p>
           </div>
 
           {/* Timeline */}
-          <div className="relative border-l-2 border-brand-200 pl-6 md:ml-6">
+          <div className="relative border-l-2 border-cyan-400/30 pl-6 md:ml-6">
 
             {[
               {
@@ -876,24 +876,24 @@ export default function Home() {
               <div key={i} className="mb-10 lg:pl-6 pl-0 md:ml-6 relative">
 
                 {/* Dot */}
-                <div className="absolute -left-[33px] top-1 lg:-left-[57px] w-4 h-4 rounded-full bg-brand-500 shadow-[0_0_20px_rgba(101,76,79,0.6)] animate-pulse" />
+                <div className="absolute -left-[33px] top-1 lg:-left-[57px] w-4 h-4 rounded-full bg-cyan-500 shadow-[0_0_20px_rgba(14,203,255,0.6)] animate-pulse" />
 
                 {/* Card */}
-                <div className="p-6 rounded-2xl bg-white/70 border border-brand-100 backdrop-blur-md shadow-sm hover:shadow-lg transition-all">
+                <div className="p-6 rounded-2xl bg-slate-900/70 border border-cyan-400/20 backdrop-blur-md shadow-sm hover:shadow-lg transition-all">
 
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="text-xs px-2 py-1 rounded-full bg-brand-100 text-brand-700 font-semibold">
+                    <span className="text-xs px-2 py-1 rounded-full bg-slate-900/70 text-cyan-300 font-semibold">
                       Step {i + 1}
                     </span>
 
-                    <div className="h-[1px] flex-1 bg-brand-100" />
+                    <div className="h-[1px] flex-1 bg-slate-700" />
                   </div>
 
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                  <h3 className="text-lg font-semibold text-slate-100 mb-1">
                     {step.title}
                   </h3>
 
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-slate-300">
                     {step.desc}
                   </p>
 
@@ -906,9 +906,9 @@ export default function Home() {
 
           {/* Bottom highlight */}
           <div className="mt-16 text-center">
-            <div className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-white/70 border border-brand-100 backdrop-blur-md whitespace-nowrap">
-              <Zap className="w-4 h-4 text-brand-600" />
-              <span className="text-sm text-gray-700 font-medium">
+            <div className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-slate-900/70 border border-cyan-400/20 backdrop-blur-md whitespace-nowrap">
+              <Zap className="w-4 h-4 text-cyan-300" />
+              <span className="text-sm text-slate-200 font-medium">
                 Fully automated AI decision system.
               </span>
             </div>
@@ -921,19 +921,19 @@ export default function Home() {
 
 
       {/* CTA */}
-      <section className="py-20 lg:py-28 bg-gradient-to-br from-brand-600 to-brand-700 relative overflow-hidden">
+      <section className="py-20 lg:py-28 bg-gradient-to-br from-cyan-600 to-cyan-700 relative overflow-hidden">
         <div className="absolute inset-0 mesh-gradient" />
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Ready to confirm your vehicle's condition?
             </h2>
-            <p className="text-brand-100 mb-8 max-w-xl mx-auto leading-relaxed">
+            <p className="text-cyan-100 mb-8 max-w-xl mx-auto leading-relaxed">
               Begin your scan instantly and receive a precise condition overview with no extra setup.
             </p>
             <Link
               href="/analysis"
-              className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-5 py-3 rounded-xl bg-white text-brand-700 font-semibold text-sm sm:text-base transition-all shadow-lg hover:shadow-xl hover:bg-brand-50"
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-5 py-3 rounded-xl bg-slate-900/75 text-cyan-200 font-semibold text-sm sm:text-base transition-all shadow-lg hover:shadow-xl hover:bg-cyan-400/20"
             >
               <Car className="w-5 h-5" />
               Start Vehicle Scan

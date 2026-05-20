@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-white text-foreground antialiased font-sans" suppressHydrationWarning>
+      <body className="bg-background text-foreground antialiased font-sans" suppressHydrationWarning>
         <Navbar />
         <main>{children}</main>
         <Footer />

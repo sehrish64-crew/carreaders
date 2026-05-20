@@ -57,17 +57,17 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen pt-20 bg-gray-50/40">
+    <div className="min-h-screen pt-20 bg-slate-950 text-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-50 border border-brand-100 mb-6">
-            <MessageSquare className="w-4 h-4 text-brand-600" />
-            <span className="text-sm text-brand-700 font-medium">Get In Touch</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-slate-800 mb-6">
+            <MessageSquare className="w-4 h-4 text-cyan-300" />
+            <span className="text-sm text-cyan-200 font-medium">Get In Touch</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl sm:text-5xl font-bold text-slate-100 mb-4">
             Contact <span className="gradient-text">Us</span>
           </h1>
-          <p className="text-gray-500 max-w-xl mx-auto">
+          <p className="text-slate-300 max-w-xl mx-auto">
             Need help with a report, scan, or pricing question? Our team is ready to assist you.
           </p>
         </motion.div>
@@ -80,60 +80,60 @@ export default function ContactPage() {
               { icon: MapPin, label: 'Office', value: 'Remote support hub' },
               { icon: Clock, label: 'Hours', value: 'Mon-Fri 9:00 - 18:00 GMT' },
             ].map((item, i) => (
-              <motion.div key={item.label} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.1 }} className="p-5 rounded-xl bg-white border border-gray-100 shadow-sm flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-brand-50 flex items-center justify-center shrink-0">
-                  <item.icon className="w-5 h-5 text-brand-600" />
+              <motion.div key={item.label} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.1 }} className="p-5 rounded-xl glass border border-slate-800 shadow-[0_20px_80px_rgba(0,0,0,0.45)] flex items-start gap-4">
+                <div className="w-10 h-10 rounded-lg bg-slate-900/80 flex items-center justify-center shrink-0">
+                  <item.icon className="w-5 h-5 text-cyan-300" />
                 </div>
                 <div>
-                  <p className="text-xs text-gray-400 mb-1">{item.label}</p>
-                  <p className="text-sm text-gray-900 font-medium">{item.value}</p>
+                  <p className="text-xs text-slate-400 mb-1">{item.label}</p>
+                  <p className="text-sm text-slate-100 font-medium">{item.value}</p>
                 </div>
               </motion.div>
             ))}
           </div>
 
           <div className="lg:col-span-2">
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="p-8 rounded-2xl bg-white border border-gray-100 shadow-sm">
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="p-8 rounded-2xl glass border border-slate-800 shadow-[0_20px_80px_rgba(0,0,0,0.45)]">
               {!submitted ? (
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                      <label className="block text-sm font-medium text-slate-300 mb-2">First Name</label>
                       <input
                         type="text"
                         value={formData.firstName}
                         onChange={(event) => setFormData((prev) => ({ ...prev, firstName: event.target.value }))}
-                        className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-brand-300 focus:ring-2 focus:ring-brand-100 transition-all"
+                        className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all"
                         placeholder="John"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                      <label className="block text-sm font-medium text-slate-300 mb-2">Last Name</label>
                       <input
                         type="text"
                         value={formData.lastName}
                         onChange={(event) => setFormData((prev) => ({ ...prev, lastName: event.target.value }))}
-                        className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-brand-300 focus:ring-2 focus:ring-brand-100 transition-all"
+                        className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all"
                         placeholder="Doe"
                       />
                     </div>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                    <label className="block text-sm font-medium text-slate-300 mb-2">Email</label>
                     <input
                       type="email"
                       value={formData.email}
                       onChange={(event) => setFormData((prev) => ({ ...prev, email: event.target.value }))}
-                      className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-brand-300 focus:ring-2 focus:ring-brand-100 transition-all"
+                      className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all"
                       placeholder="john@example.com"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                    <label className="block text-sm font-medium text-slate-300 mb-2">Subject</label>
                     <select
                       value={formData.subject}
                       onChange={(event) => setFormData((prev) => ({ ...prev, subject: event.target.value }))}
-                      className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-gray-900 focus:outline-none focus:border-brand-300 focus:ring-2 focus:ring-brand-100 transition-all"
+                      className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-100 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all"
                     >
                       <option value="general">General Inquiry</option>
                       <option value="report">AI Report Question</option>
@@ -142,32 +142,32 @@ export default function ContactPage() {
                     </select>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                    <label className="block text-sm font-medium text-slate-300 mb-2">Message</label>
                     <textarea
                       rows={4}
                       value={formData.message}
                       onChange={(event) => setFormData((prev) => ({ ...prev, message: event.target.value }))}
-                      className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-brand-300 focus:ring-2 focus:ring-brand-100 transition-all resize-none"
+                      className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all resize-none"
                       placeholder="Tell us how we can help..."
                     />
                   </div>
-                  {error && <p className="text-sm text-brand-500">{error}</p>}
+                  {error && <p className="text-sm text-cyan-300">{error}</p>}
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full px-6 py-3 rounded-xl bg-brand-600 hover:bg-brand-700 disabled:cursor-not-allowed disabled:bg-brand-400 text-white font-semibold transition-all shadow-lg shadow-brand-600/20 flex items-center justify-center gap-2"
+                    className="w-full px-6 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 disabled:cursor-not-allowed disabled:bg-slate-700 text-slate-950 font-semibold transition-all shadow-lg shadow-cyan-500/20 flex items-center justify-center gap-2"
                   >
                     <Send className="w-4 h-4" />
                     {loading ? 'Sending...' : 'Send Message'}
                   </button>
                 </form>
               ) : (
-                <motion.div initial={{ scale: 0.95, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="text-center py-12">
-                  <div className="w-16 h-16 rounded-full bg-brand-50 flex items-center justify-center mx-auto mb-4">
-                    <Send className="w-8 h-8 text-brand-600" />
+                <motion.div initial={{ scale: 0.95, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="text-center py-12 glass border border-slate-800 shadow-[0_20px_80px_rgba(0,0,0,0.45)]">
+                  <div className="w-16 h-16 rounded-full bg-slate-900/80 flex items-center justify-center mx-auto mb-4">
+                    <Send className="w-8 h-8 text-cyan-300" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Message Sent</h3>
-                  <p className="text-gray-500 text-sm">We will get back to you within 24 hours.</p>
+                  <h3 className="text-xl font-bold text-slate-100 mb-2">Message Sent</h3>
+                  <p className="text-slate-300 text-sm">We will get back to you within 24 hours.</p>
                 </motion.div>
               )}
             </motion.div>

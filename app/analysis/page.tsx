@@ -102,10 +102,10 @@ function isApiIssue(value: unknown): value is ApiIssue {
 }
 
 const SEVERITY_COLORS = {
-  low: { bg: 'bg-brand-500/20', border: 'border-brand-500/30', text: 'text-brand-400' },
-  medium: { bg: 'bg-yellow-500/20', border: 'border-yellow-500/30', text: 'text-yellow-400' },
-  high: { bg: 'bg-orange-500/20', border: 'border-orange-500/30', text: 'text-orange-400' },
-  critical: { bg: 'bg-brand-600/20', border: 'border-brand-600/30', text: 'text-brand-600' },
+  low: { bg: 'bg-cyan-500/20', border: 'border-cyan-500/30', text: 'text-cyan-300' },
+  medium: { bg: 'bg-amber-500/20', border: 'border-amber-500/30', text: 'text-amber-300' },
+  high: { bg: 'bg-orange-500/20', border: 'border-orange-500/30', text: 'text-orange-300' },
+  critical: { bg: 'bg-rose-500/20', border: 'border-rose-500/30', text: 'text-rose-300' },
 };
 
 function UnifiedImageUploader({
@@ -198,14 +198,14 @@ function UnifiedImageUploader({
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="bg-white/95 border border-gray-200 rounded-3xl p-8 shadow-sm"
+      className="bg-slate-900/80 border border-cyan-400/10 rounded-3xl p-8 shadow-[0_30px_80px_rgba(8,18,35,0.4)]"
     >
       <motion.div className="text-center mb-6">
-        <motion.div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-brand-50 text-brand-700">
+        <motion.div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-cyan-500/10 text-cyan-300">
           <Camera className="h-8 w-8" />
         </motion.div>
-        <h3 className="text-xl font-semibold text-gray-900 mb-2">Upload Vehicle Images for Inspection</h3>
-        <p className="text-gray-600">Only vehicle images are accepted; unrelated files are ignored automatically.</p>
+        <h3 className="text-xl font-semibold text-slate-100 mb-2">Upload Vehicle Images for Inspection</h3>
+        <p className="text-slate-400">Only vehicle images are accepted; unrelated files are ignored automatically.</p>
       </motion.div>
 
       <div
@@ -217,7 +217,7 @@ function UnifiedImageUploader({
         onDragLeave={() => setDragOver(false)}
         onDrop={handleDrop}
         className={`relative rounded-3xl border-2 border-dashed p-8 transition ${
-          dragOver ? 'border-brand-400 bg-brand-50' : 'border-gray-200 hover:border-brand-300 hover:bg-brand-50/50'
+          dragOver ? 'border-cyan-400 bg-cyan-500/10' : 'border-slate-700 hover:border-cyan-300 hover:bg-cyan-500/10'
         } ${isAnalyzing || uploading ? 'pointer-events-none opacity-60' : 'cursor-pointer'}`}
       >
         <input
@@ -229,19 +229,19 @@ function UnifiedImageUploader({
           onChange={handleFileInput}
         />
         {uploading ? (
-          <motion.div className="flex flex-col items-center gap-3 text-brand-700">
-            <Loader2 className="h-6 w-6 animate-spin" />
+          <motion.div className="flex flex-col items-center gap-3 text-cyan-300">
+            <Loader2 className="h-6 w-6 animate-spin text-cyan-300" />
             <p className="text-sm">Scanning uploaded images for your vehicle...</p>
-            <p className="text-xs text-gray-500">The first pass may take a moment while our AI model prepares.</p>
+            <p className="text-xs text-slate-500">The first pass may take a moment while our AI model prepares.</p>
           </motion.div>
         ) : (
           <motion.div className="flex flex-col items-center gap-4 text-center">
-            <motion.div className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-100">
-              <Plus className="h-6 w-6 text-brand-700" />
+            <motion.div className="flex h-12 w-12 items-center justify-center rounded-full bg-cyan-500/10">
+              <Plus className="h-6 w-6 text-cyan-300" />
             </motion.div>
             <motion.div>
-              <p className="font-medium text-gray-900">Drop vehicle images here</p>
-              <p className="text-sm text-gray-500">or click to upload up to 10 photos</p>
+              <p className="font-medium text-slate-100">Drop vehicle images here</p>
+              <p className="text-sm text-slate-400">or click to upload up to 10 photos</p>
             </motion.div>
           </motion.div>
         )}
@@ -251,12 +251,12 @@ function UnifiedImageUploader({
         <motion.div
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mt-4 rounded-2xl border border-brand-200 bg-brand-50 p-4"
+          className="mt-4 rounded-2xl border border-rose-500/20 bg-rose-500/10 p-4"
         >
-            <div className="flex items-start gap-2 text-brand-700">
+            <div className="flex items-start gap-2 text-rose-300">
             <AlertCircle className="h-5 w-5 flex-shrink-0 mt-0.5" />
             <motion.div className="space-y-1 text-sm">
-              <p className="font-semibold">Some images were not accepted</p>
+              <p className="font-semibold text-slate-100">Some images were not accepted</p>
               {validationErrors.map((msg) => (
                 <p key={msg}>{msg}</p>
               ))}
@@ -272,11 +272,11 @@ function UnifiedImageUploader({
               key={image.id}
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
-              className="group relative overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm"
+              className="group relative overflow-hidden rounded-3xl border border-slate-700 bg-slate-950/80 shadow-[0_30px_80px_rgba(8,18,35,0.35)]"
             >
               <img src={image.preview} alt="Preview" className="h-40 w-full object-cover" />
-              <motion.div className="absolute inset-x-0 bottom-0 p-3 bg-white/85 backdrop-blur-sm">
-                <p className="text-sm text-gray-700">{image.uploaded ? 'Ready for analysis' : 'Image verified'}</p>
+              <motion.div className="absolute inset-x-0 bottom-0 p-3 bg-slate-950/85 backdrop-blur-sm">
+                <p className="text-sm text-slate-300">{image.uploaded ? 'Ready for analysis' : 'Image verified'}</p>
               </motion.div>
               {!isAnalyzing && (
                 <button
@@ -285,7 +285,7 @@ function UnifiedImageUploader({
                     e.stopPropagation();
                     onImageRemove(image.id);
                   }}
-                  className="absolute right-3 top-3 rounded-full bg-brand-600/90 p-2 opacity-0 transition group-hover:opacity-100"
+                  className="absolute right-3 top-3 rounded-full bg-cyan-600/90 p-2 opacity-0 transition group-hover:opacity-100"
                 >
                   <X className="h-4 w-4 text-white" />
                 </button>
@@ -296,7 +296,7 @@ function UnifiedImageUploader({
       )}
 
       {images.length > 0 && (
-        <p className="mt-4 text-center text-sm text-gray-400">
+        <p className="mt-4 text-center text-sm text-slate-400">
           {images.length} vehicle image{images.length !== 1 ? 's' : ''} ready
         </p>
       )}
@@ -324,14 +324,14 @@ function ScanningInterface({
   return (
     <motion.div className="space-y-8">
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center">
-        <motion.div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-brand-50 text-brand-700">
+        <motion.div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-cyan-500/10 text-cyan-300">
           <Scan className="h-8 w-8 animate-pulse" />
         </motion.div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">
+        <h2 className="text-2xl font-bold text-slate-100 mb-2">
           {mode === 'results' ? 'Inspection Complete' : 'Inspection Underway'}
         </h2>
-        <p className="text-gray-600">{statusMessage}</p>
-        <p className="text-gray-500 text-sm mt-2">
+        <p className="text-slate-400">{statusMessage}</p>
+        <p className="text-slate-500 text-sm mt-2">
           {mode === 'results'
             ? 'See the identified issues and recommendations below.'
             : `Processing ${images.length} image${images.length !== 1 ? 's' : ''} to detect vehicle issues.`}
@@ -339,7 +339,7 @@ function ScanningInterface({
       </motion.div>
 
       {errorMessage ? (
-        <motion.div className="rounded-3xl border border-brand-600/50 bg-brand-600/10 p-4 text-brand-700">
+        <motion.div className="rounded-3xl border border-rose-500/20 bg-rose-500/10 p-4 text-rose-200">
           <strong>Error:</strong> {errorMessage}
         </motion.div>
       ) : null}
@@ -347,16 +347,16 @@ function ScanningInterface({
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="relative rounded-3xl border border-brand-600/30 bg-gradient-to-b from-brand-600/5 to-transparent p-6 overflow-hidden"
+        className="relative rounded-3xl border border-cyan-500/20 bg-gradient-to-b from-cyan-500/10 to-transparent p-6 overflow-hidden"
       >
-        <motion.div className="relative h-40 bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+        <motion.div className="relative h-40 bg-slate-950 rounded-3xl overflow-hidden border border-slate-800 shadow-[0_25px_80px_rgba(8,18,35,0.3)]">
           <motion.div
-            className="absolute inset-x-0 h-1 bg-gradient-to-r from-transparent via-brand-400 to-transparent shadow-lg shadow-brand-400/30"
+            className="absolute inset-x-0 h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent shadow-lg shadow-cyan-400/30"
             animate={{ y: [0, 160] }}
             transition={{ duration: 2.5, repeat: Infinity, ease: 'linear' }}
           />
           <motion.div
-            className="absolute inset-x-0 h-16 bg-gradient-to-b from-brand-600/20 to-transparent pointer-events-none"
+            className="absolute inset-x-0 h-16 bg-gradient-to-b from-cyan-500/20 to-transparent pointer-events-none"
             animate={{ y: [0, 160] }}
             transition={{ duration: 2.5, repeat: Infinity, ease: 'linear' }}
           />
@@ -365,7 +365,7 @@ function ScanningInterface({
               {Array(32)
                 .fill(0)
                 .map((_, i) => (
-                  <motion.div key={i} className="border border-brand-600" />
+                  <motion.div key={i} className="border border-cyan-500/20" />
                 ))}
             </motion.div>
           </motion.div>
@@ -376,16 +376,16 @@ function ScanningInterface({
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 0.5, scale: 1 }}
                 transition={{ delay: idx * 0.1 }}
-                className="w-20 h-20 rounded-lg overflow-hidden border border-brand-600/30 flex-shrink-0"
+                className="w-20 h-20 rounded-lg overflow-hidden border border-cyan-500/30 flex-shrink-0"
               >
                 <img src={img.preview} alt={`Scan preview ${idx + 1}`} className="w-full h-full object-cover" />
               </motion.div>
             ))}
             {images.length > 3 && (
-              <motion.div className="text-brand-700 text-xs font-mono">+{images.length - 3} more</motion.div>
+              <motion.div className="text-cyan-300 text-xs font-mono">+{images.length - 3} more</motion.div>
             )}
           </motion.div>
-          <motion.div className="absolute inset-0 flex items-end justify-center p-4 text-xs font-mono text-brand-400/40">
+          <motion.div className="absolute inset-0 flex items-end justify-center p-4 text-xs font-mono text-cyan-300/40">
             SCANNING...
           </motion.div>
         </motion.div>
@@ -394,21 +394,21 @@ function ScanningInterface({
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm"
+        className="rounded-3xl border border-slate-700 bg-slate-900/80 p-6 shadow-[0_20px_60px_rgba(8,18,35,0.35)]"
       >
-        <motion.div className="flex items-center justify-between mb-4 text-gray-900">
+        <motion.div className="flex items-center justify-between mb-4 text-slate-100">
           <span className="font-semibold">Analysis progress</span>
-          <strong className="text-brand-700 text-lg">{Math.round(progress)}%</strong>
+          <strong className="text-cyan-300 text-lg">{Math.round(progress)}%</strong>
         </motion.div>
-        <motion.div className="h-4 overflow-hidden rounded-full bg-gray-100 border border-brand-200">
+        <motion.div className="h-4 overflow-hidden rounded-full bg-slate-800 border border-cyan-500/20">
           <motion.div
-            className="h-full rounded-full gradient-brand-button shadow-md shadow-brand-600/20"
+            className="h-full rounded-full bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-300 shadow-md shadow-cyan-600/20"
             initial={{ width: 0 }}
             animate={{ width: `${progress}%` }}
             transition={{ duration: 0.5 }}
           />
         </motion.div>
-        <p className="text-xs text-gray-500 mt-3">
+        <p className="text-xs text-slate-500 mt-3">
           Processing {Math.ceil((progress / 100) * images.length)} of {images.length} image
           {images.length !== 1 ? 's' : ''}
         </p>
@@ -417,19 +417,19 @@ function ScanningInterface({
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm"
+        className="rounded-3xl border border-slate-700 bg-slate-900/80 p-6 shadow-[0_20px_60px_rgba(8,18,35,0.35)]"
       >
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">Detected Issues</h3>
+        <h3 className="text-lg font-semibold text-slate-100 mb-4">Detected Issues</h3>
         <motion.div className="space-y-4">
           {detectedIssues.length === 0 ? (
-            <motion.div className="rounded-3xl border border-gray-200 bg-brand-50/80 p-6 text-center text-gray-600">
+            <motion.div className="rounded-3xl border border-slate-700 bg-slate-950/70 p-6 text-center text-slate-400">
               <motion.div
                 animate={{ opacity: [0.5, 1, 0.5] }}
                 transition={{ duration: 2, repeat: Infinity }}
                 className="flex flex-col items-center gap-3"
               >
                 <motion.div animate={{ rotate: 360 }} transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}>
-                  <Scan className="h-8 w-8 text-brand-600" />
+                  <Scan className="h-8 w-8 text-cyan-400" />
                 </motion.div>
                 <p>Reviewing uploaded photos for wear, faults, and potential damage...</p>
               </motion.div>
@@ -443,7 +443,7 @@ function ScanningInterface({
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.05 }}
-                    className="rounded-3xl border border-brand-200 bg-brand-50/80 p-4"
+                    className="rounded-3xl border border-slate-700 bg-slate-950/70 p-4"
                   >
                     <motion.div className="flex flex-col gap-3">
                       <motion.div className="flex items-center justify-between gap-4">
@@ -452,13 +452,13 @@ function ScanningInterface({
                         >
                           {issue.severity.toUpperCase()}
                         </span>
-                        <span className="text-xs text-gray-400">{Math.round(issue.confidence)}% confidence</span>
+                        <span className="text-xs text-slate-500">{Math.round(issue.confidence)}% confidence</span>
                       </motion.div>
-                      <h4 className="text-lg font-semibold text-brand-700">{issue.title}</h4>
-                      <motion.div className="space-y-2 text-sm text-gray-600">
+                      <h4 className="text-lg font-semibold text-slate-100">{issue.title}</h4>
+                      <motion.div className="space-y-2 text-sm text-slate-400">
                         <p>{issue.description}</p>
-                        <p className="font-medium text-gray-900">Location: {issue.location}</p>
-                        <p className="text-sm text-gray-700">Repair estimate: {issue.repairEstimate}</p>
+                        <p className="font-medium text-slate-100">Location: {issue.location}</p>
+                        <p className="text-sm text-slate-300">Repair estimate: {issue.repairEstimate}</p>
                       </motion.div>
                     </motion.div>
                   </motion.div>
@@ -469,32 +469,32 @@ function ScanningInterface({
                 initial={{ opacity: 0, scale: 0.96 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.2 }}
-                className="absolute inset-x-0 top-[37%] -translate-y-1/2 mx-2 sm:mx-4 rounded-2xl sm:rounded-3xl border border-brand-200 bg-white/90 backdrop-blur-md p-4 sm:p-6 shadow-xl"
+                className="absolute inset-x-0 top-[37%] -translate-y-1/2 mx-2 sm:mx-4 rounded-2xl sm:rounded-3xl border border-slate-700 bg-slate-950/90 backdrop-blur-xl p-6 shadow-xl"
               >
                 <motion.div className="flex flex-col items-center text-center gap-3 sm:gap-4">
-                  <motion.div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-brand-100 text-brand-600">
+                  <motion.div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-cyan-500/10 text-cyan-300">
                     <Lock className="h-5 w-5 sm:h-6 sm:w-6" />
                   </motion.div>
 
                   <motion.div>
-                    <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-1">Unlock the Detailed Report</h4>
-                    <p className="text-gray-500 text-xs sm:text-sm max-w-xs mx-auto leading-relaxed">
+                    <h4 className="text-base sm:text-lg font-bold text-slate-100 mb-1">Unlock the Detailed Report</h4>
+                    <p className="text-slate-400 text-xs sm:text-sm max-w-xs mx-auto leading-relaxed">
                       {detectedIssues.length} issue{detectedIssues.length !== 1 ? 's' : ''} found. Access the full
                       breakdown with location notes, repair guidance, and priority ratings.
                     </p>
                   </motion.div>
 
-                  <motion.div className="flex flex-col xs:flex-row flex-wrap justify-center gap-x-3 gap-y-1.5 text-xs sm:text-sm text-gray-500">
+                  <motion.div className="flex flex-col xs:flex-row flex-wrap justify-center gap-x-3 gap-y-1.5 text-xs sm:text-sm text-slate-400">
                     <span className="flex items-center justify-center gap-1.5">
-                      <CheckCircle2 className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-brand-500 flex-shrink-0" />
+                      <CheckCircle2 className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-cyan-400 flex-shrink-0" />
                       Complete issue breakdown
                     </span>
                     <span className="flex items-center justify-center gap-1.5">
-                      <CheckCircle2 className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-brand-500 flex-shrink-0" />
+                      <CheckCircle2 className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-cyan-400 flex-shrink-0" />
                       Suggested repair range
                     </span>
                     <span className="flex items-center justify-center gap-1.5">
-                      <CheckCircle2 className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-brand-500 flex-shrink-0" />
+                      <CheckCircle2 className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-cyan-400 flex-shrink-0" />
                       Recommended action plan
                     </span>
                   </motion.div>
@@ -502,7 +502,7 @@ function ScanningInterface({
                   <button
                     type="button"
                     onClick={onUnlockReport}
-                    className="inline-flex items-center gap-2 rounded-xl sm:rounded-2xl bg-brand-600 px-5 py-2.5 sm:px-7 sm:py-3 text-sm sm:text-base text-white font-semibold shadow-md hover:bg-brand-500 active:scale-95 transition-all"
+                    className="inline-flex items-center gap-2 rounded-xl sm:rounded-2xl bg-cyan-600 px-5 py-2.5 sm:px-7 sm:py-3 text-sm sm:text-base text-white font-semibold shadow-md hover:bg-cyan-500 active:scale-95 transition-all"
                   >
                     Unlock Full Report
                     <ArrowRight className="h-4 w-4" />
@@ -781,11 +781,11 @@ export default function AnalysisPage() {
   const currentStatus = phase === 'upload' ? 'Ready to upload vehicle images.' : scanStatus;
 
   return (
-    <motion.div className="min-h-screen bg-brand-50">
+    <motion.div className="min-h-screen bg-slate-950 text-slate-100">
       <motion.div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-8 mt-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Vehicle Condition Scan</h1>
-          <p className="text-xl text-gray-600 mb-6">
+          <h1 className="text-4xl font-bold text-slate-100 mb-4">Vehicle Condition Scan</h1>
+          <p className="text-xl text-slate-400 mb-6">
             Upload vehicle images and get instant AI-powered vehicle inspection.
           </p>
         </motion.div>
@@ -804,7 +804,7 @@ export default function AnalysisPage() {
                   <button
                     type="button"
                     onClick={startAnalysis}
-                    className="inline-flex items-center gap-3 rounded-3xl bg-brand-600 px-8 py-4 text-white font-semibold shadow-xl transition hover:bg-brand-500"
+                    className="inline-flex items-center gap-3 rounded-3xl bg-cyan-600 px-8 py-4 text-white font-semibold shadow-xl transition hover:bg-cyan-500"
                   >
                     <Scan className="h-5 w-5" />
                     Run AI Scan ({images.length} image{images.length !== 1 ? 's' : ''})

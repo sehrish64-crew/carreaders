@@ -4,31 +4,31 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 10%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
-    --primary: 353 14% 35%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 0 0% 100%;
-    --secondary-foreground: 0 0% 10%;
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
-    --accent: 353 18% 48%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 353 18% 48%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 0 0% 92%;
-    --input: 0 0% 92%;
-    --ring: 353 14% 45%;
-    --chart-1: 353 14% 35%;
-    --chart-2: 353 16% 45%;
-    --chart-3: 353 12% 30%;
-    --chart-4: 353 14% 40%;
-    --chart-5: 353 18% 55%;
-    --radius: 0.75rem;
+    --background: 214 25% 7%;
+    --foreground: 210 14% 96%;
+    --card: 217 24% 11%;
+    --card-foreground: 210 24% 96%;
+    --popover: 215 26% 13%;
+    --popover-foreground: 210 24% 96%;
+    --primary: 190 100% 62%;
+    --primary-foreground: 210 100% 100%;
+    --secondary: 212 20% 16%;
+    --secondary-foreground: 210 24% 80%;
+    --muted: 215 20% 13%;
+    --muted-foreground: 210 24% 70%;
+    --accent: 190 100% 70%;
+    --accent-foreground: 210 100% 100%;
+    --destructive: 348 90% 64%;
+    --destructive-foreground: 210 100% 100%;
+    --border: 215 20% 18%;
+    --input: 215 18% 13%;
+    --ring: 190 100% 60%;
+    --chart-1: 190 90% 70%;
+    --chart-2: 203 85% 56%;
+    --chart-3: 217 30% 80%;
+    --chart-4: 196 100% 56%;
+    --chart-5: 187 100% 76%;
+    --radius: 1rem;
   }
 }
 
@@ -37,7 +37,10 @@
     @apply border-border;
   }
   body {
-    @apply bg-white text-foreground antialiased;
+    @apply bg-background text-foreground antialiased;
+    background-image: radial-gradient(circle at top left, rgba(29, 161, 255, 0.08), transparent 26%),
+      radial-gradient(circle at bottom right, rgba(79, 209, 255, 0.06), transparent 22%);
+    background-attachment: fixed;
   }
 }
 body {
@@ -48,7 +51,82 @@ body {
 }
 @layer utilities {
   .glass {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(15, 24, 42, 0.80);
+    backdrop-filter: blur(24px);
+    border: 1px solid rgba(45, 156, 255, 0.16);
+  }
+
+  .glass-strong {
+    background: rgba(10, 16, 28, 0.90);
+    backdrop-filter: blur(32px);
+    -webkit-backdrop-filter: blur(32px);
+    border: 1px solid rgba(45, 156, 255, 0.18);
+  }
+
+  .glass-card {
+    background: rgba(8, 18, 35, 0.78);
+    backdrop-filter: blur(28px);
+    -webkit-backdrop-filter: blur(28px);
+    border: 1px solid rgba(56, 174, 255, 0.16);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+  }
+
+  .glow-border {
+    border: 1px solid rgba(42, 173, 255, 0.14);
+    box-shadow: 0 0 30px rgba(37, 138, 255, 0.16);
+  }
+
+  .gradient-brand-button {
+    background: linear-gradient(135deg, #12b0ff 0%, #1da1ff 50%, #33c5ff 100%);
+    background-size: 200% auto;
+    color: white;
+  }
+  .gradient-brand-button:hover {
+    background-position: right center;
+  }
+
+  .gradient-accent {
+    background: linear-gradient(135deg, #0e70ff 0%, #1fc4ff 100%);
+    background-size: 200% auto;
+  }
+  .gradient-accent:hover {
+    background-position: right center;
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #3fc4ff, #a7f6ff, #58b8ff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 3s ease infinite;
+  }
+
+  .card-shine::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent 40%, rgba(20, 148, 255, 0.09) 50%, transparent 60%);
+    animation: card-shine 6s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  .premium-blur {
+    filter: blur(10px);
+    opacity: 0.35;
+    user-select: none;
+    pointer-events: none;
+  }
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+}
+@layer utilities {
+  .glass {
+    background: #000;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(0, 0, 0, 0.06);
