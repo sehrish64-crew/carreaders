@@ -1,0 +1,36 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bodyGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#34D399" />
+      <stop offset="100%" stop-color="#0F766E" />
+    </linearGradient>
+    <linearGradient id="glassGradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#D1FAE5" />
+      <stop offset="100%" stop-color="#6EE7B7" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" rx="60" fill="#ECFDF5" />
+  <g opacity="0.95">
+    <path d="M120 460C120 422.386 148.386 394 186 394H614C651.614 394 680 422.386 680 460V470H120V460Z" fill="#D1FAE5"/>
+    <path d="M160 390C160 362.386 182.386 340 210 340H590C617.614 340 640 362.386 640 390V430H160V390Z" fill="url(#bodyGradient)"/>
+    <path d="M190 340L230 260H570L610 340H190Z" fill="url(#bodyGradient)"/>
+    <path d="M230 260C220 230 240 200 280 200H520C560 200 580 230 570 260H230Z" fill="url(#glassGradient)" />
+    <path d="M260 260H540" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" opacity="0.5" />
+    <path d="M240 430C218.908 430 200 448.908 200 470C200 491.092 218.908 510 240 510C261.092 510 280 491.092 280 470C280 448.908 261.092 430 240 430Z" fill="#0F766E" />
+    <path d="M560 430C538.908 430 520 448.908 520 470C520 491.092 538.908 510 560 510C581.092 510 600 491.092 600 470C600 448.908 581.092 430 560 430Z" fill="#0F766E" />
+    <path d="M230 460H570" stroke="#A7F3D0" stroke-width="18" stroke-linecap="round" />
+    <path d="M260 450H310" stroke="#E0F2FE" stroke-width="10" stroke-linecap="round" opacity="0.7" />
+    <path d="M490 450H540" stroke="#E0F2FE" stroke-width="10" stroke-linecap="round" opacity="0.7" />
+    <path d="M320 330H380" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" opacity="0.9" />
+    <path d="M420 330H480" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" opacity="0.9" />
+    <circle cx="180" cy="180" r="32" fill="#34D399" fill-opacity="0.25" />
+    <circle cx="620" cy="140" r="28" fill="#10B981" fill-opacity="0.3" />
+    <path d="M170 170L210 210" stroke="#10B981" stroke-width="8" stroke-linecap="round" opacity="0.8" />
+    <path d="M610 130L650 170" stroke="#10B981" stroke-width="8" stroke-linecap="round" opacity="0.8" />
+    <path d="M260 220C260 208.954 268.954 200 280 200H520C531.046 200 540 208.954 540 220V240H260V220Z" fill="#FFFFFF" opacity="0.28" />
+  </g>
+
+  <circle cx="520" cy="170" r="16" fill="#34D399" opacity="0.8" />
+  <path d="M520 170L560 170" stroke="#34D399" stroke-width="6" stroke-linecap="round" opacity="0.9" />
+  <path d="M400 90L450 110" stroke="#34D399" stroke-width="6" stroke-linecap="round" opacity="0.9" />
+</svg>

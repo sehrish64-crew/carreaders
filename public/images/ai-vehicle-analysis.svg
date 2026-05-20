@@ -1,0 +1,69 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ECFDF5" />
+      <stop offset="100%" stop-color="#E6F4F1" />
+    </linearGradient>
+    <linearGradient id="carGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F766E" />
+      <stop offset="100%" stop-color="#34D399" />
+    </linearGradient>
+    <linearGradient id="panelGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#D1FAE5" stop-opacity="0.7" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="900" rx="60" fill="url(#bgGradient)" />
+  <g opacity="0.95">
+    <path d="M120 140C120 98.3868 154.387 64 196 64H1004C1045.61 64 1080 98.3868 1080 140V760C1080 801.613 1045.61 836 1004 836H196C154.387 836 120 801.613 120 760V140Z" fill="white"/>
+    <path d="M120 140C120 98.3868 154.387 64 196 64H1004C1045.61 64 1080 98.3868 1080 140V760C1080 801.613 1045.61 836 1004 836H196C154.387 836 120 801.613 120 760V140Z" stroke="#10B981" stroke-opacity="0.2" stroke-width="8"/>
+  </g>
+
+  <rect x="180" y="240" width="840" height="420" rx="42" fill="url(#panelGradient)" />
+
+  <path d="M280 520C280 486 306 460 340 460H860C894 460 920 486 920 520V532H280V520Z" fill="#F2FDF7" />
+  <path d="M280 520C280 486 306 460 340 460H860C894 460 920 486 920 520V532H280V520Z" fill="url(#carGradient)" opacity="0.35"/>
+
+  <path d="M340 540C320 540 300 524 280 500V500H920V500C900 524 880 540 860 540H340Z" fill="#D1FAE5" />
+
+  <path d="M330 500C330 470 355 450 385 450H815C845 450 870 470 870 500V520H330V500Z" fill="#F8FAFC" />
+  <path d="M310 500H890" stroke="#A7F3D0" stroke-width="12" stroke-linecap="round" />
+
+  <path d="M380 450C356.686 450 338 467.686 338 491V524H382V491C382 477.745 391.745 468 405 468H795C808.255 468 818 477.745 818 491V524H862V491C862 467.686 843.314 450 820 450H380Z" fill="url(#carGradient)"/>
+
+  <path d="M308 522C308 507 320 495 335 495H865C880 495 892 507 892 522V534H308V522Z" fill="#ECFDF5" />
+
+  <circle cx="360" cy="585" r="58" fill="#10B981" fill-opacity="0.15" />
+  <circle cx="828" cy="585" r="58" fill="#10B981" fill-opacity="0.15" />
+  <circle cx="360" cy="585" r="28" fill="#047857" />
+  <circle cx="828" cy="585" r="28" fill="#047857" />
+
+  <rect x="270" y="320" width="140" height="120" rx="18" fill="white" stroke="#D1FAE5" stroke-width="4" />
+  <rect x="760" y="300" width="160" height="100" rx="18" fill="white" stroke="#D1FAE5" stroke-width="4" />
+  <rect x="340" y="330" width="360" height="22" rx="11" fill="#34D399" />
+  <rect x="340" y="366" width="280" height="18" rx="9" fill="#6EE7B7" />
+  <rect x="720" y="330" width="140" height="18" rx="9" fill="#A7F3D0" />
+  <rect x="720" y="362" width="100" height="18" rx="9" fill="#A7F3D0" />
+
+  <circle cx="845" cy="330" r="28" fill="#10B981" opacity="0.2" />
+  <circle cx="845" cy="330" r="16" fill="#10B981" />
+  <circle cx="845" cy="330" r="8" fill="white" />
+
+  <rect x="240" y="190" width="200" height="120" rx="32" fill="#111827" opacity="0.12" />
+  <rect x="760" y="520" width="220" height="140" rx="32" fill="#111827" opacity="0.12" />
+
+  <path d="M310 210H420" stroke="#10B981" stroke-width="8" stroke-linecap="round" />
+  <path d="M310 235H395" stroke="#10B981" stroke-width="8" stroke-linecap="round" />
+  <path d="M310 260H380" stroke="#10B981" stroke-width="8" stroke-linecap="round" />
+
+  <path d="M760 620H940" stroke="#10B981" stroke-width="8" stroke-linecap="round" />
+  <path d="M760 650H900" stroke="#10B981" stroke-width="8" stroke-linecap="round" />
+  <path d="M760 680H860" stroke="#10B981" stroke-width="8" stroke-linecap="round" />
+
+  <circle cx="980" cy="180" r="36" fill="#10B981" opacity="0.14" />
+  <circle cx="980" cy="180" r="22" fill="#10B981" />
+  <path d="M962 180H994" stroke="white" stroke-width="4" stroke-linecap="round" />
+
+  <path d="M450 700C450 678.091 468.091 660 490 660H710C731.909 660 750 678.091 750 700V716H450V700Z" fill="#ECFDF5" />
+</svg>
